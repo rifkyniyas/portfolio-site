@@ -25,17 +25,19 @@ const Navbar = () => {
             type="button"
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
-            <Icon icon="ci:hamburger-md" />
+            <Icon
+              icon={`${navbarOpen ? "ic:baseline-close" : "ci:hamburger-md"}`}
+            />
           </button>
         </div>
         <div
           className={
-            "lg:flex flex-grow items-center py-3" +
+            "lg:flex flex-grow items-center py-3 bg-dark" +
             (navbarOpen ? " flex" : " hidden")
           }
           id="example-navbar-danger"
         >
-          <ul className="flex flex-col lg:flex-row lg:items-center lg:gap-x-4 text-sm list-none lg:ml-auto">
+          <ul className="flex flex-col gap-y-2 lg:flex-row lg:items-center lg:gap-x-4 text-sm list-none lg:ml-auto">
             <li className="nav-item">
               <a
                 className="px-3 py-2 flex items-center uppercase font-bold leading-snug text-white hover:opacity-75 
